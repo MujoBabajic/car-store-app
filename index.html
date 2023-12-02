@@ -16,12 +16,24 @@
         <h2>Add a New Car</h2>
         <br />
         <form id="add-product-form">
-          <label for="productName">Car Name:</label>
-          <input type="text" id="productName" name="productName" required />
+          <label for="product-name">Car Name:</label>
+          <input type="text" id="product-name" name="product-name" required />
 
-          <label for="productPrice">Price:</label>
-          <input type="number" id="productPrice" name="productPrice" required />
+          <label for="product-price">Price:</label>
+          <input
+            type="number"
+            id="product-price"
+            name="product-price"
+            required
+          />
 
+          <label for="product-description">Description</label>
+          <textarea
+            name="product-description"
+            id="product-description"
+            cols="30"
+            rows="6"
+          ></textarea>
           <button type="submit">Add Car</button>
         </form>
       </section>
