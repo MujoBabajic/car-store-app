@@ -36,7 +36,15 @@
       </section>
       <br />
       <section class="products">
-        <h2>Available Cars</h2>
+        <div class="products-header">
+          <h2>Available Cars</h2>
+          <select name="sort-select" id="sort-select">
+            <option value="nameasc">Name - Ascending</option>
+            <option value="namedesc">Name - Descending</option>
+            <option value="priceasc">Price - Ascending</option>
+            <option value="pricedesc">Price - Descending</option>
+          </select>
+        </div>
         <br />
         <table class="product-table">
           <thead>

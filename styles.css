@@ -77,9 +77,12 @@ textarea {
 
 .product-table th,
 .product-table td {
-  border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: rgb(247, 247, 247);
 }
 
 .product-table th {
@@ -108,4 +111,9 @@ textarea {
   height: 100%;
   font-size: 15px;
   padding: 5px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
 }
