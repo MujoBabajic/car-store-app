@@ -25,6 +25,16 @@ const server = http.createServer((req, res) => {
         res.end(data);
       }
     });
+  } else if (req.url === "/script.js" && req.method === "GET") {
+    fs.readFile("./script.js", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end("Internal Server Error");
+      } else {
+        res.writeHead(200, { "Content-Type": "text/javascript" });
+        res.end(data);
+      }
+    });
   } else if (req.method === "POST" && req.url === "/submit") {
     let body = "";
     req.on("data", (chunk) => {
@@ -41,6 +51,7 @@ const server = http.createServer((req, res) => {
         carName,
         price,
         description,
+        action: "Remove",
       };
 
       console.log(newCar);
